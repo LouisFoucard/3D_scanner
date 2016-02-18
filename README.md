@@ -3,6 +3,8 @@ blender python script to receive and process data from an arduino/lidar/mpu6050 
 reading servo motors positionl, and IMU (mpu 6050) is used to determine the quaternion that defines the lidar orientation.
 This reduces the error made in reconstrcuting the 3d position of the points, and makes the scanner more robust: if the scanner is moved midway through the scan, the IMU will track that additional rotation, and the scan will take that into account.
 
+![alt tag](https://github.com/LouisFoucard/3D_scanner/blob/master/scan_movie.gif)
+
 Here is a short description of the different files:
 
 _3D_scanner.ino:  C++ arduino driver, takes care of data gathering from the sensors, and rotates the servos to complete the scan. Also sends the sensor data to the python script 3D_scanner.ipynb.
