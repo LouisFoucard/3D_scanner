@@ -10,6 +10,7 @@ _3D_scanner.ino:  C++ arduino driver, takes care of data gathering from the sens
 3D_scanner.ipynb: interfaces between the scanner and Blender, a 3D simulation software used to render the scan. Values from the sensors are converted into 3d coordinates and are passed to Blender. (futur version will skip this step all together and go directly to Blender from Arduino)
 
 3D_scanner.blend and blender_python_script.py: Blender file and a blender python script which receives the sensor data, parses through the points coordinates and creates a NURB interpolating surface that represent the scanned surface. Points are stored in such a way that the surface reconstruction is extremely fast and can be done in real time. 
+
 Below is an example of a reconstructed 3d cloud point, and the resuling interpolated surface:
 
 ![alt tag](https://github.com/LouisFoucard/3D_scanner/blob/master/blender_screen.png)
